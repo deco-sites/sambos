@@ -8,7 +8,7 @@ export interface Form {
 export default function Form() {
   return (
     <div class="w-full flex justify-center p-8">
-      <div class="flex flex-col items-center justify-center w-1/2 p-8 px-16 bg-zinc-100 rounded-[2.5rem] gap-4">
+      <div class="flex flex-col items-center justify-center w-1/2 p-8 px-16 bg-stone-100 rounded-[2.5rem] gap-4">
         <Field label="Nome" type="input" />
         <Field label="Email" type="input" />
         <button class="btn-primary btn w-full mt-8">Enviar</button>
