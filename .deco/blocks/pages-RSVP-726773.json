@@ -6,7 +6,7 @@
       "__resolveType": "headermain"
     },
     {
-      "__resolveType": "site/sections/Form.tsx"
+      "__resolveType": "GuestForm"
     }
   ],
   "seo": {

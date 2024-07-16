@@ -123,5 +123,9 @@
   "/.deco/blocks/headermain.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Header.tsx"
+  },
+  "/.deco/blocks/GuestForm.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Form.tsx"
   }
 }
