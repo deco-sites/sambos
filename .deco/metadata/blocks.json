@@ -119,5 +119,9 @@
   "/.deco/blocks/Preview%20site%2Fsections%2FHeader.tsx.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Header.tsx"
+  },
+  "/.deco/blocks/headermain.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Header.tsx"
   }
 }

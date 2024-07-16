@@ -1,7 +1,11 @@
 {
   "name": "RSVP",
   "path": "/rsvp",
-  "sections": [],
+  "sections": [
+    {
+      "__resolveType": "site/sections/Form.tsx"
+    }
+  ],
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
