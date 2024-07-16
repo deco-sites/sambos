@@ -586,7 +586,7 @@
           "id": "themes::Theme%20Selector::palette::Theme%20Selector::%7B%7D",
           "state": {
             "__signal": null,
-            "value": "error"
+            "value": null
           }
         },
         "themes::Theme%20Viewer::palette::Theme%20Viewer::%7B%7D": {
@@ -1255,29 +1255,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 21.186440677966107,
-                "isClosable": true,
-                "reorderEnabled": true,
-                "title": "",
-                "activeItemIndex": 0,
-                "content": [
-                  {
-                    "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D",
-                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D\" />",
-                    "type": "component",
-                    "componentName": "component",
-                    "componentState": {
-                      "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D"
-                    },
-                    "width": 30,
-                    "isClosable": true,
-                    "reorderEnabled": true
-                  }
-                ]
-              },
-              {
-                "type": "stack",
-                "width": 53.38983050847458,
+                "width": 70,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -1299,19 +1277,19 @@
               },
               {
                 "type": "stack",
-                "width": 25.423728813559315,
+                "width": 30,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
                 "activeItemIndex": 0,
                 "content": [
                   {
-                    "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::JSON%20Properties::data-object::JSON%20Properties::%7B%7D",
-                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2FMy%2520Theme.json::JSON%20Properties::data-object::JSON%20Properties::%7B%7D\" />",
+                    "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D\" />",
                     "type": "component",
                     "componentName": "component",
                     "componentState": {
-                      "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::JSON%20Properties::data-object::JSON%20Properties::%7B%7D"
+                      "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D"
                     },
                     "isClosable": true,
                     "reorderEnabled": true
@@ -1328,18 +1306,6 @@
         "maximisedItemId": null
       },
       "tabs": {
-        "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D": {
-          "name": "Properties",
-          "icon": "list",
-          "accepts": "function",
-          "render": "function",
-          "viewId": "Properties",
-          "width": 30,
-          "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D",
-          "state": {
-            "__signal": null
-          }
-        },
         "%2F.deco%2Fblocks%2FMy%2520Theme.json::Preview::visibility::Preview::%7B%7D": {
           "name": "Preview",
           "icon": "visibility",
@@ -1352,13 +1318,13 @@
             "__signal": null
           }
         },
-        "%2F.deco%2Fblocks%2FMy%2520Theme.json::JSON%20Properties::data-object::JSON%20Properties::%7B%7D": {
-          "name": "JSON Properties",
-          "icon": "data-object",
+        "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D": {
+          "name": "Properties",
+          "icon": "list",
           "accepts": "function",
           "render": "function",
-          "viewId": "JSON Properties",
-          "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::JSON%20Properties::data-object::JSON%20Properties::%7B%7D",
+          "viewId": "Properties",
+          "id": "%2F.deco%2Fblocks%2FMy%2520Theme.json::Properties::list::Properties::%7B%7D",
           "state": {
             "__signal": null
           }

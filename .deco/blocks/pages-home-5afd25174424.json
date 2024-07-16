@@ -3,7 +3,19 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "Header"
+      "__resolveType": "site/sections/Header.tsx",
+      "navigation": {
+        "links": [
+          {
+            "url": "/rsvp",
+            "label": "RSVP"
+          }
+        ],
+        "buttons": []
+      },
+      "logo": {
+        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11868/a96d2aae-d5ec-4480-ab62-a7de8287efa8"
+      }
     },
     {
       "__resolveType": "site/sections/Hero.tsx",

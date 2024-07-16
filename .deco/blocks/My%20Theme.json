@@ -17,9 +17,9 @@
   "mode": "light",
   "mainColors": {
     "base-100": "#FAFAFA",
-    "primary": "#ADA5C5",
-    "secondary": "#789b90",
-    "tertiary": "#d7b8a8",
+    "primary": "#06413d",
+    "secondary": "#f0d9cc",
+    "tertiary": "#9fc1ab",
     "neutral": "#fafafa",
     "success": "#84ab73",
     "warning": "#d1cd61",
