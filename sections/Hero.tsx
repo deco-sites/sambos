@@ -19,8 +19,6 @@ export interface Props {
    */
   description?: string;
   image?: ImageWidget;
-  placement?: "left" | "right";
-  cta?: CTA[];
 }
 
 const PLACEMENT = {
@@ -33,21 +31,12 @@ export default function HeroFlats({
   description =
     "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away.",
   image,
-  placement = "left",
-  cta = [
-    { id: "change-me-1", href: "/", text: "Change me", outline: false },
-    { id: "change-me-2", href: "/", text: "Change me", outline: true },
-  ],
 }: Props) {
   return (
-    <nav class="">
-      <div class="flex flex-col items-center gap-8">
+    <nav>
+      <div class="flex flex-col items-center gap-8 justify-center">
         <div
-          class={`flex w-full xl:container xl:mx-auto z-10 ${
-            image
-              ? PLACEMENT[placement]
-              : "flex-col items-center justify-center text-center"
-          } items-center`}
+          class={`flex w-full z-10 flex-col justify-center text-center items-center`}
         >
           {image && (
             <Image
@@ -61,6 +50,18 @@ export default function HeroFlats({
               loading="lazy"
             />
           )}
+        </div>
+        <div class="px-20 items-center justify-center flex flex-col gap-2">
+          <div
+            class="inline-block lg:text-[80px] text-4xl leading-none font-medium"
+            dangerouslySetInnerHTML={{
+              __html: title,
+            }}
+          >
+          </div>
+          <p class="text-sm leading-[150%]">
+            {description}
+          </p>
         </div>
       </div>
     </nav>
