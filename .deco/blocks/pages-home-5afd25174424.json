@@ -8,13 +8,17 @@
         "links": [
           {
             "url": "/rsvp",
-            "label": "RSVP"
+            "label": "rsvp"
+          },
+          {
+            "label": "presentes",
+            "url": "/presentes"
           }
         ],
         "buttons": []
       },
       "logo": {
-        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11868/116abdc7-796a-40d7-b8a0-6a7c2db174c7"
+        "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11868/f582dc6c-832f-4569-aaa4-d676cafd2307"
       }
     },
     {

@@ -49,8 +49,8 @@ export default function Header({
 
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
-        <a href="/">
-          <Image src={logo.src || ""} width={20} height={28} alt={logo.alt} />
+        <a href="/" class="flex flex-row items-center gap-2">
+          <Image src={logo.src || ""} width={28} height={28} alt={logo.alt} />
           <span>{logo.text || ""}</span>
         </a>
 
