@@ -13,6 +13,7 @@ export interface Nav {
   logo?: {
     src?: ImageWidget;
     alt?: string;
+    text?: string;
   };
   navigation?: {
     links: {
@@ -49,7 +50,8 @@ export default function Header({
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
         <a href="/">
-          <Image src={logo.src || ""} width={40} height={28} alt={logo.alt} />
+          <Image src={logo.src || ""} width={20} height={28} alt={logo.alt} />
+          <span>{logo.text || ""}</span>
         </a>
 
         <div class="hidden items-center justify-between lg:flex w-full">
