@@ -1,0 +1,61 @@
+{
+  "__resolveType": "site/sections/Theme/Theme.tsx",
+  "colorScheme": "any",
+  "buttonStyle": {
+    "--border-btn": "1px",
+    "--rounded-btn": "0.4rem",
+    "--btn-focus-scale": "0.95",
+    "--animation-btn": "0.25s"
+  },
+  "otherStyles": {
+    "--rounded-box": "1rem",
+    "--rounded-badge": "1.9rem",
+    "--animation-input": "0.2s",
+    "--tab-border": "1px",
+    "--tab-radius": "0.5rem"
+  },
+  "mode": "light",
+  "mainColors": {
+    "base-100": "#FAFAFA",
+    "primary": "#ADA5C5",
+    "secondary": "#789b90",
+    "tertiary": "#d7b8a8",
+    "neutral": "#fafafa",
+    "success": "#84ab73",
+    "warning": "#d1cd61",
+    "error": "#c42121",
+    "info": "#738fce"
+  },
+  "complementaryColors": {
+    "base-200": "#ededed",
+    "base-300": "#e6e6e6",
+    "base-content": "#262626",
+    "primary-content": "#FAFAFA",
+    "secondary-content": "#FAFAFA",
+    "tertiary-content": "#FAFAFA",
+    "neutral-content": "#262626",
+    "success-content": "#262626",
+    "warning-content": "#262626",
+    "error-content": "#262626",
+    "info-content": "#262626"
+  },
+  "font": {
+    "__resolveType": "website/loaders/fonts/googleFonts.ts",
+    "fonts": [
+      {
+        "variations": [
+          {
+            "weight": "500"
+          },
+          {
+            "weight": "400"
+          },
+          {
+            "weight": "600"
+          }
+        ],
+        "family": "Inter"
+      }
+    ]
+  }
+}
