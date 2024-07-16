@@ -108,5 +108,12 @@
   "/.deco/blocks/My%20Theme.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Theme/Theme.tsx"
-  }
+  },
+  "/.deco/blocks/pages-RSVP-726773.json": {
+    "name": "RSVP",
+    "path": "/rsvp",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  },
+  "/.deco/blocks/deco-records.json": null
 }
