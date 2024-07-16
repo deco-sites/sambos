@@ -3,6 +3,9 @@
   "path": "/rsvp",
   "sections": [
     {
+      "__resolveType": "headermain"
+    },
+    {
       "__resolveType": "site/sections/Form.tsx"
     }
   ],

@@ -7,7 +7,7 @@ export interface Form {
 
 export default function Form() {
   return (
-    <div class="flex flex-col items-center justify-center w-1/3">
+    <div class="flex flex-col items-center justify-center w-1/3 p-8 border-base-900 rounded-lg">
       <Field label="Nome" type="input" />
       <Field label="Email" type="input" />
     </div>
