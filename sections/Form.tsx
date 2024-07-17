@@ -20,7 +20,12 @@ const handleSubmit = async (
 
   const data: { [key: string]: any } = {};
   formData.forEach((value, key) => {
-    data[key] = value;
+    if (key.startsWith("extra")) {
+      if (!data.extra) data.extra = [];
+      data.extra.push(value);
+    } else {
+      data[key] = value;
+    }
   });
 
   console.log("form data:", data);
@@ -53,6 +58,8 @@ export default function FormComponent() {
 function FormContent(
   { setSubmitted }: { setSubmitted: (submitted: boolean) => void },
 ) {
+  const [extra, setExtra] = useState<Array<{ name: string }>>([]);
+
   return (
     <form
       class="w-full flex gap-4 flex-col"
@@ -60,8 +67,10 @@ function FormContent(
     >
       <Field label="nome" name="name" type="text" _class="input" />
       <Field label="email" name="email" type="email" _class="input" />
-      <div class="flex flex-col gap-2 w-full">
-        <label class="label">você comparecerá ao casamento?</label>
+      <div class="flex flex-col gap-1 w-full my-4">
+        <label class="label font-semibold">
+          você comparecerá ao casamento?
+        </label>
         <div class="flex gap-4 flex-col justify-start">
           <div class="flex items-center gap-2">
             <input
@@ -69,9 +78,8 @@ function FormContent(
               name="attending"
               class="radio"
               value="yes"
-              defaultChecked
             />
-            <label>sim, comparecerei.</label>
+            <label>sim, comparecerei!</label>
           </div>
           <div class="flex items-center gap-2">
             <input
@@ -84,6 +92,34 @@ function FormContent(
           </div>
         </div>
       </div>
+      <div class="flex gap-1 flex-col">
+        <label class="label font-semibold">
+          deseja confirmar a presença outro convidado?
+        </label>
+        {extra.length > 0 &&
+          (
+            <div class="mb-4">
+              {extra.map((_extra, i) => (
+                <Field
+                  key={`extra-${i}`}
+                  label={`convidado ${i + 1}`}
+                  name={`extra-${i}`}
+                  type="text"
+                  _class="input"
+                />
+              ))}
+            </div>
+          )}
+        <button
+          class="btn btn-outline w-fit"
+          type="button"
+          onClick={() => {
+            setExtra([...extra, { name: "" }]);
+          }}
+        >
+          adicionar convidado
+        </button>
+      </div>
       <button
         type="submit"
         class="btn-primary btn w-full mt-8"
@@ -95,7 +131,7 @@ function FormContent(
 }
 
 interface FieldProps {
-  label: string;
+  label?: string;
   name: string;
   type: string;
   _class?: string;
@@ -104,7 +140,7 @@ interface FieldProps {
 const Field = ({ label, name, type, _class }: FieldProps) => {
   return (
     <div class="flex flex-col justify-start w-full gap-1">
-      <label htmlFor={name}>{label}</label>
+      {label && <label htmlFor={name} class="bold">{label}</label>}
       <input
         id={name}
         name={name}

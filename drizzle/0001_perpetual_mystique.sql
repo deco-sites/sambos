@@ -1,0 +1,1 @@
+ALTER TABLE `guests` ADD `isExtra` integer DEFAULT 0;
