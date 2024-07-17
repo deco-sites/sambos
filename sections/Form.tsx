@@ -1,3 +1,4 @@
+import { invoke } from "../runtime.ts";
 export interface Form {
   id?: string;
   href: string;
@@ -5,18 +6,37 @@ export interface Form {
   outline?: boolean;
 }
 
-const handleSubmit = (e: any) => {
+const handleSubmit = async (e: Event) => {
   e.preventDefault();
+  console.log("handleSubmit chamado");
+
   const form = e.target as HTMLFormElement;
   const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  console.log(data);
+
+  const data: { [key: string]: any } = {};
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+
+  console.log("form data:", data);
+
+  try {
+    const result = await invoke.site.actions.addGuest({
+      ...data,
+    });
+    console.log("Guest added successfully:", result);
+  } catch (error) {
+    console.error("Error submitting form:", error);
+  }
 };
 
-export default function Form() {
+export default function FormComponent() {
   return (
-    <form class="w-full flex justify-center p-8" onSubmit={handleSubmit}>
-      <div class="flex flex-col items-center justify-center w-full lg:w-1/2 p-8 lg:px-16 bg-stone-100 rounded-[2.5rem] gap-4">
+    <div class="w-full flex justify-center p-8">
+      <form
+        class="flex flex-col items-center justify-center w-full lg:w-1/2 p-8 lg:px-16 bg-stone-100 rounded-[2.5rem] gap-4"
+        onSubmit={handleSubmit}
+      >
         <Field label="nome" name="name" type="text" _class="input" />
         <Field label="email" name="email" type="email" _class="input" />
         <div class="flex flex-col gap-2 w-full">
@@ -25,7 +45,7 @@ export default function Form() {
             <div class="flex items-center gap-2">
               <input
                 type="radio"
-                name="attendance"
+                name="attending"
                 class="radio"
                 value="yes"
                 defaultChecked
@@ -35,7 +55,7 @@ export default function Form() {
             <div class="flex items-center gap-2">
               <input
                 type="radio"
-                name="attendance"
+                name="attending"
                 class="radio"
                 value="no"
               />
@@ -43,11 +63,14 @@ export default function Form() {
             </div>
           </div>
         </div>
-        <button class="btn-primary btn w-full mt-8" type="submit">
+        <button
+          type="submit"
+          class="btn-primary btn w-full mt-8"
+        >
           enviar
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 

@@ -2,9 +2,13 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$1 from "./actions/addGuest.ts";
+import * as $$$$$$$$$0 from "./actions/AddGuest.tsx";
+import * as $$$$$$$$$2 from "./actions/removeGuest.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/records.ts";
 import * as $$$$$$$$$$$1 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$2 from "./apps/site.ts";
+import * as $$$0 from "./loaders/loadGuestst.ts";
 import * as $$$$$$0 from "./sections/BlogPosts.tsx";
 import * as $$$$$$1 from "./sections/Faq.tsx";
 import * as $$$$$$2 from "./sections/Footer.tsx";
@@ -20,6 +24,9 @@ import * as $$$$$$8 from "./sections/Testimonials.tsx";
 import * as $$$$$$9 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
+  "loaders": {
+    "site/loaders/loadGuestst.ts": $$$0,
+  },
   "sections": {
     "site/sections/BlogPosts.tsx": $$$$$$0,
     "site/sections/Faq.tsx": $$$$$$1,
@@ -34,6 +41,11 @@ const manifest = {
     "site/sections/Logos.tsx": $$$$$$7,
     "site/sections/Testimonials.tsx": $$$$$$8,
     "site/sections/Theme/Theme.tsx": $$$$$$9,
+  },
+  "actions": {
+    "site/actions/addGuest.ts": $$$$$$$$$1,
+    "site/actions/AddGuest.tsx": $$$$$$$$$0,
+    "site/actions/removeGuest.ts": $$$$$$$$$2,
   },
   "apps": {
     "site/apps/deco/records.ts": $$$$$$$$$$$0,

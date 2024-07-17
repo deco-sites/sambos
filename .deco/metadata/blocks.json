@@ -127,5 +127,9 @@
   "/.deco/blocks/GuestForm.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Form.tsx"
+  },
+  "/.deco/blocks/Preview%20%2Factions%2FAddGuest.tsx.json": {
+    "blockType": "actions",
+    "__resolveType": "site/actions/AddGuest.tsx"
   }
 }
