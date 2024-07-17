@@ -9,6 +9,10 @@
       {
         "label": "presentes",
         "url": "/presentes"
+      },
+      {
+        "label": "local",
+        "url": "/local"
       }
     ],
     "buttons": []
