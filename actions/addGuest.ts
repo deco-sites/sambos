@@ -31,8 +31,8 @@ const isGuestPropType = (key: string, value: any): boolean => {
 
 interface Props {
   name: string;
-  email?: string;
-  attending?: string;
+  email: string;
+  attending: string;
   extra?: string[];
 }
 
@@ -68,6 +68,14 @@ export default async function addGuest(
 
   if (!newGuest.name) {
     throw new Error("Name is required");
+  }
+
+  if (!newGuest.email) {
+    throw new Error("Email is required");
+  }
+
+  if (!newGuest.attending) {
+    throw new Error("Attending is required");
   }
 
   // Adiciona o convidado principal

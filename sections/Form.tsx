@@ -1,3 +1,4 @@
+import Icon from "site/components/ui/Icon.tsx";
 import { invoke } from "../runtime.ts";
 import { useState } from "preact/hooks";
 
@@ -65,15 +66,33 @@ function FormContent(
       class="w-full flex gap-4 flex-col"
       onSubmit={(e) => handleSubmit(e, setSubmitted)}
     >
-      <Field label="nome e sobrenome" name="name" type="text" _class="input" />
-      <Field label="email" name="email" type="email" _class="input" />
+      <Field
+        label="nome e sobrenome"
+        name="name"
+        type="text"
+        _class="input"
+        required={true}
+      />
+      <Field
+        label="email"
+        name="email"
+        type="email"
+        _class="input"
+        required={true}
+      />
       <div class="flex flex-col gap-1 w-full my-4">
-        <label class="label font-semibold">
-          você comparecerá ao casamento?
-        </label>
+        <div class="flex flex-row gap-2 items-center">
+          <label class="label font-semibold">
+            você comparecerá ao evento?
+          </label>
+          <span class="text-error">
+            <Icon id="asterisk" size={10}></Icon>
+          </span>
+        </div>
         <div class="flex gap-4 flex-col justify-start">
           <div class="flex items-center gap-2">
             <input
+              required
               type="radio"
               name="attending"
               class="radio"
@@ -135,13 +154,25 @@ interface FieldProps {
   name: string;
   type: string;
   _class?: string;
+  required?: boolean;
 }
 
-const Field = ({ label, name, type, _class }: FieldProps) => {
+const Field = ({ label, name, type, _class, required = false }: FieldProps) => {
   return (
     <div class="flex flex-col justify-start w-full gap-1">
-      {label && <label htmlFor={name} class="bold">{label}</label>}
+      {label &&
+        (
+          <div class="flex flex-row items-center gap-2">
+            <label htmlFor={name} class="bold">{label}</label>
+            {required && (
+              <span class="text-error">
+                <Icon id="asterisk" size={10}></Icon>
+              </span>
+            )}
+          </div>
+        )}
       <input
+        required={required}
         id={name}
         name={name}
         type={type}
