@@ -55,7 +55,7 @@ function FormContent(
 ) {
   return (
     <form
-      class="w-full"
+      class="w-full flex gap-4 flex-col"
       onSubmit={(e) => handleSubmit(e, setSubmitted)}
     >
       <Field label="nome" name="name" type="text" _class="input" />
