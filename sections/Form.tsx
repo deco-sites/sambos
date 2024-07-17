@@ -45,7 +45,7 @@ export default function FormComponent() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div class="flex justify-center px-8 min-h-[70vh]">
+    <div class="flex justify-center px-8 min-h-[50vh]">
       <div class="flex flex-col items-center justify-center w-full md:w-1/2 p-8 lg:px-16 bg-stone-100 rounded-[2.5rem] gap-4">
         {submitted
           ? <div class="text-center text-success">Sucesso!</div>
@@ -65,7 +65,7 @@ function FormContent(
       class="w-full flex gap-4 flex-col"
       onSubmit={(e) => handleSubmit(e, setSubmitted)}
     >
-      <Field label="nome" name="name" type="text" _class="input" />
+      <Field label="nome e sobrenome" name="name" type="text" _class="input" />
       <Field label="email" name="email" type="email" _class="input" />
       <div class="flex flex-col gap-1 w-full my-4">
         <label class="label font-semibold">
@@ -94,7 +94,7 @@ function FormContent(
       </div>
       <div class="flex gap-1 flex-col">
         <label class="label font-semibold">
-          deseja confirmar a presença outro convidado?
+          deseja confirmar a presença de outro convidado?
         </label>
         {extra.length > 0 &&
           (
